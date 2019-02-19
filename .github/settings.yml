@@ -1,0 +1,107 @@
+repository:
+  name: .github
+  description: ":octocat: ProBot Settings root config"
+  topics: probot, settings, dependencies
+  homepage: https://dependencies.org
+  private: false
+  has_issues: false
+  has_wiki: false
+  has_downloads: false
+  has_projects: false
+  default_branch: master
+  allow_squash_merge: true
+  allow_merge_commit: false
+  allow_rebase_merge: true
+
+teams:
+  - name: authors
+    permission: admin
+
+  - name: maintainers
+    permission: push
+
+branches:
+  - name: master
+    protection:
+      required_pull_request_reviews:
+        required_approving_review_count: 1
+        dismiss_stale_reviews: true
+        require_code_owner_reviews: true
+        dismissal_restrictions:
+          users: []
+          teams:
+            - authors
+            - maintainers
+
+      required_status_checks:
+        strict: true
+        contexts: []
+
+      enforce_admins: false
+
+      restrictions:
+        users: []
+        teams:
+          - authors
+          - maintainers
+
+labels:
+  - name: duplicate
+    description: This issue or pull request already exists
+    color: ededed
+
+  - name: "Priority: Critical"
+    color: ee0701
+
+  - name: "Priority: High"
+    color: d93f0b
+
+  - name: "Priority: Medium"
+    color: fbca04
+
+  - name: "Priority: Low"
+    color: 0e8a16
+
+  - name: "Status: Abandoned"
+    description: Change of direction, no longer applicable
+    color: 000000
+
+  - name: "Status: Blocked"
+    description: Depends on other issues
+    color: ee0701
+
+  - name: "Status: In Progress"
+    description: Currently being worked on
+    color: cccccc
+
+  - name: "Status: On Hold"
+    description: No work planned on this for now
+    color: e99695
+
+  - name: "Status: Proposal"
+    description: New feature or request
+    color: d4c5f9
+
+  - name: "Status: Review Needed"
+    description: Ready to be reviewed & merged
+    color: fbca04
+
+  - name: "Type: Bug"
+    description: Something isn't working
+    color: ee0701
+
+  - name: "Type: Documentation"
+    description: Missing or unclear Documentation
+    color: 5319e7
+
+  - name: "Type: Enhancement"
+    description: Performance or Code Optimization
+    color: 1d76db
+
+  - name: "Type: Maintenance"
+    description: Chores (Dependencies, Security, etc ...)
+    color: fbca04
+
+  - name: "Type: Question"
+    description: Generic question
+    color: cc317c
