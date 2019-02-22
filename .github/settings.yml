@@ -62,29 +62,9 @@ labels:
   - name: "Priority: Low"
     color: 0e8a16
 
-  - name: "Status: Abandoned"
-    description: Change of direction, no longer applicable
-    color: 000000
-
-  - name: "Status: Blocked"
-    description: Depends on other issues
-    color: ee0701
-
-  - name: "Status: In Progress"
-    description: Currently being worked on
-    color: cccccc
-
-  - name: "Status: On Hold"
-    description: No work planned on this for now
-    color: e99695
-
-  - name: "Status: Proposal"
+  - name: "Type: Proposal"
     description: New feature or request
     color: d4c5f9
-
-  - name: "Status: Review Needed"
-    description: Ready to be reviewed & merged
-    color: fbca04
 
   - name: "Type: Bug"
     description: Something isn't working
